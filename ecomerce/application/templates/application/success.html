@@ -1,0 +1,24 @@
+{% extends "application/base.html" %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title %}
+
+{% block main-content %}
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-sm-6 offset-sm-3">
+                <h3>Success</h3>
+                <p>Your registration was successful. You will be redirected back to the registration page shortly.</p>
+                <!-- You can include any additional content here -->
+                <div>
+                    <iframe src="https://giphy.com/embed/ibolLe3mOqHE3PQTtk" width="200" height="200" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "{% url 'customerregistration' %}";
+        }, 5000); // Redirect after 1 seconds (adjust as needed)
+    </script>
+{% endblock main-content %}
